@@ -25,9 +25,6 @@ public class Login extends JFrame {
 	private JLabel lblAddressDesc;
 	private JLabel lblPortDesc;
 
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -41,9 +38,6 @@ public class Login extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
 	public Login() {
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
@@ -107,9 +101,7 @@ public class Login extends JFrame {
 		btnLogin.setBounds(102, 305, 89, 23);
 		contentPane.add(btnLogin);
 	}
-	/**
-	 * Login stuff here
-	 */
+
 	private void login(String name, String address, int port) {
 		dispose();
 		new Client(name, address, port);
