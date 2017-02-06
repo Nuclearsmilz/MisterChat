@@ -14,7 +14,7 @@ public class Client extends JFrame {
 	private DatagramSocket socket;
 	private InetAddress ip;
 
-	private Thread sent;
+	private Thread send;
 	private String name, address;
 	private int port, ID = -1;
 
@@ -48,7 +48,7 @@ public class Client extends JFrame {
 	}
 
 	public void send( byte[] data ) {
-		sent = new Thread(() -> {
+		send = new Thread(() -> {
 			DatagramPacket packet = new DatagramPacket(data, data.length, ip, port);
 			try {
 				socket.receive(packet);
@@ -56,7 +56,7 @@ public class Client extends JFrame {
 				e.printStackTrace();
 			}
 		});
-		sent.start();
+		send.start();
 	}
 
 	public void close() {
