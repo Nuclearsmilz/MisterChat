@@ -3,6 +3,7 @@ package nukechat;
 import java.awt.*;
 
 import javax.swing.*;
+import javax.swing.border.*;
 
 public class Login extends JFrame {
 
@@ -32,6 +33,18 @@ public class Login extends JFrame {
 			e.printStackTrace();
 			System.out.println("Cannot set default look and feel.");
 		}
+
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(300, 400);
+		setResizable(false);
+		setTitle("Login");
+		setLocationRelativeTo(null);
+
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
 
 	}
 
