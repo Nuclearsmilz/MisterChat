@@ -4,7 +4,7 @@ import java.net.*;
 
 public class ClientServer {
 	public String username;
-	public int port;
+	public int port, numAttempts = 0;
 	public final int ID;
 	public InetAddress ip;
 

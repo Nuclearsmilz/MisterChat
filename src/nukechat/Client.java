@@ -16,7 +16,7 @@ public class Client extends JFrame {
 
 	private Thread sent;
 	private String name, address;
-	private int port, ID = 1;
+	private int port, ID = -1;
 
 	public Client(String name, String address, int port) {
 		this.name = name;
