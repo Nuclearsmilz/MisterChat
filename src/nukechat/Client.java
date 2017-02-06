@@ -1,4 +1,4 @@
-package com.nuclearsmilz.misterchat;
+package nukechat;
 
 import javax.swing.*;
 
