@@ -9,13 +9,6 @@ public class Login extends JFrame {
 	private static final long serialVersionUID = 1L;
 
 	private JPanel contentPane;
-	private JTextField txtName;
-	private JTextField txtAddress;
-	private JTextField textPort;
-	private JLabel lblAddress;
-	private JLabel labelPort;
-	private JLabel lblAddressDesc;
-	private JLabel lblPortDesc;
 
 	public static void main( String[] args ) {
 		EventQueue.invokeLater(new Runnable() {
@@ -31,10 +24,18 @@ public class Login extends JFrame {
 	}
 
 	public Login() {
+		try {
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException
+		        | UnsupportedLookAndFeelException e)
+		{
+			e.printStackTrace();
+			System.out.println("Cannot set default look and feel.");
+		}
 
 	}
 
 	private void login( String name, String address, int port ) {
-
+		dispose();
 	}
 }
